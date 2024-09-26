@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+}
+
+hr{
+    border: none;
+    border-top: 1px solid #3c3c3c;
+    margin: 5px 0;
+}
+
+.header{
+    width: 100%;
+    padding: 1em 2em;
+    box-shadow: 0 0 5px #416467;
+    position: fixed;
+    background-color: #518084;
+    z-index: 5;
+
+    .brand{
+        position: relative;
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.5rem;
+        overflow: hidden;
+
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -100%;
+
+            width: 100%;
+            height: 5px;
+            background: #cadbd0;
+            transition: left .5s ease;
+            
+        }
+
+        &:hover::after{
+            left: 0;
+        }
+    }
+}
+
+.jumbo{
+    background-image: url(/01EX-HTMLBasisDeel1-CSSIntro/oefening02/images/DSC_7591.JPG);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-content: center;
+
+    h1{
+        color: #fff;
+        font-size: 3rem;
+        text-shadow: 0 0 1px #3c3c3c;
+    }
+}
+
+.container{
+    padding: 2em 10em;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    background-color: #cadbd0;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #cadbd0;
+        clip-path: polygon(100% 100%, 100% 80%, 0% 0%, 0% 100%);
+    }
+
+    .newsflash{
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        padding: 1em;
+        border-radius: 7.5px;
+        border: 1px solid #416467;
+        box-shadow: 2px 2px 10px rgba(60, 60, 60, .2);
+        margin-bottom: 2em;
+
+        .image{
+            max-width: 25%;
+
+            img{
+                width: 100%;
+                border-radius: 3.75px;
+            }
+        }
+
+        .data{
+            display: flex;
+            flex-direction: column;
+
+            h1{
+                margin-bottom: .5em;
+            }
+
+            .links{
+                margin-top: auto;
+                display: flex;
+                flex-direction: row;
+                gap: 2em;
+
+                a{
+                    text-decoration: none;
+                    display: block;
+                    background-color: #416467;
+                    padding: 1em;
+                    border-radius: 7.5px;
+                    color: #fff;
+                    width: fit-content;
+                    transition: background-color .5s ease;
+
+                    &:hover{
+                        background-color: #518084;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .logo{
+        margin: 0 auto 2em auto;
+        width: 256px;
+    }
+    p{
+        margin-bottom: 1em;
+        color: #3c3c3c;
+    }
+}
+
+footer{
+    width: 100%;
+    padding: 1em 2em;
+    background-color: #518084;
+    color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+}
